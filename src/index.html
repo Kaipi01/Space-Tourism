@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../dist/main.css" />
+    <script defer src="./script.js"></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="home">
+    <nav class="nav">
+      <a href="#Home">
+        <img class="nav__logo" src="./assets/shared/logo.svg" alt="Logo" />
+      </a>
+      <button class="nav__menu-btn">
+        <span class="nav__menu-btn-span">Menu</span>
+        <img
+          class="nav__menu-btn-icon"
+          src="./assets/shared/icon-hamburger.svg"
+          alt="open menu"
+        />
+        <img
+          class="nav__menu-btn-icon nav__menu-btn-icon--hide"
+          src="./assets/shared/icon-close.svg"
+          alt="close menu"
+        />
+      </button>
+      <ul class="nav__menu">
+        <li class="nav__menu-item">
+          <a class="nav__menu-link nav__menu-link--active" href="#Home"">
+            <span class="nav__menu-link-nr">00</span>Home
+          </a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="#Destination">
+            <span class="nav__menu-link-nr">01</span>Destination
+          </a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="#Crew">
+            <span class="nav__menu-link-nr">02</span>Crew
+          </a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="#Technology">
+            <span class="nav__menu-link-nr">03</span>Technology
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
-
-  Explore
-
-</body>
+    <main class="hero">
+      <div>
+        <p class="hero__title-sub">So, you want to travel to</p>
+        <h1 class="hero__title">
+          Space
+        </h1>
+        <p class="hero__intro">
+          Let's face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we'll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <a class="hero__link" href="./pages/crew-commander.html">Explore</a>
+    </main>
+  </body>
 </html>
