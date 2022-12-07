@@ -1,0 +1,24 @@
+@use "./utils/variables" as *;
+@use "./layout/nav";
+@use "./layout/home";
+@use "./layout/hero";
+@use "./layout/crew";
+@use "./layout/destination";
+@use "./layout/technology";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden !important;
+  background-color: $background-color;
+  color: $font-color;
+  font-family: $font-base-family;
+  font-size: $font-base-size;
+}
