@@ -1,0 +1,15 @@
+@use '../utils/variables' as *;
+
+.home {
+    background-image: url(/src/assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $tablet) {
+        background-image: url(/src/assets/home/background-home-tablet.jpg);
+    }
+
+    @media (min-width: $desktop) {
+        background-image: url(/src/assets/home/background-home-desktop.jpg);
+    }
+}
