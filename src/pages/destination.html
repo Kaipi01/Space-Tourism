@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../../dist/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script defer type="module" src="../script.js"></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="destination">
+
+  <nav class="nav">
+    <a href="../index.html">
+      <img class="nav__logo" src="../assets/shared/logo.svg" alt="Logo" />
+    </a>
+    <button class="nav__menu-btn">
+      <span class="nav__menu-btn-span">Menu</span>
+      <img class="nav__menu-btn-icon" src="../assets/shared/icon-hamburger.svg" alt="open menu" />
+      <img class="nav__menu-btn-icon nav__menu-btn-icon--hide" src="../assets/shared/icon-close.svg"
+        alt="close menu" />
+    </button>
+    <ul class="nav__menu">
+      <li class="nav__menu-item">
+        <a class="nav__menu-link" href="../index.html"">
+          <span class=" nav__menu-link-nr">00</span>Home
+        </a>
+      </li>
+      <li class="nav__menu-item">
+        <a class="nav__menu-link nav__menu-link--active" href="./destination.html">
+          <span class="nav__menu-link-nr">01</span>Destination
+        </a>
+      </li>
+      <li class="nav__menu-item">
+        <a class="nav__menu-link" href="./crew.html">
+          <span class="nav__menu-link-nr">02</span>Crew
+        </a>
+      </li>
+      <li class="nav__menu-item">
+        <a class="nav__menu-link" href="./technology.html">
+          <span class="nav__menu-link-nr">03</span>Technology
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="destination__content">
+    <h1 class="destination__title">
+      <span class="destination__title-nr">01</span>Pick your destination
+    </h1>
+    
+
+    <div class="destination__nav">
+      <button class="destination__nav-btn" data-slide="0">Moon</button>
+      <button class="destination__nav-btn" data-slide="1">Mars</button>
+      <button class="destination__nav-btn" data-slide="2">Europa</button>
+      <button class="destination__nav-btn" data-slide="3">Titan</button>
+    </div>
+
+    <div class="swiper destination__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide destination__swiper-slide">
+          <article class="destination__article">
+            <img class="destination__img" src="../assets/destination/image-moon.webp" alt="moon">
+            <h2 class="destination__name">Moon</h2>
+      
+            <p class="destination__description">See our planet as you've never seen it before. A perfect relaxing trip away to help
+              regain perspective and come back refreshed. While you're there, take in some history
+              by visiting the Luna 2 and Apollo 11 landing sites.
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Averge">Avg.</abbr> distance
+              <span class="destination__info-data">384,400 km</span>
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Estimate">Est.</abbr> travel time
+              <span class="destination__info-data">3 days</span>
+            </p>
+      
+          </article>
+        </div>
+        <div class="swiper-slide destination__swiper-slide">
+          <article class="destination__article">
+            <img class="destination__img" src="../assets/destination/image-mars.webp" alt="mars">
+            <h2 class="destination__name">Mars</h2>
+      
+            <p class="destination__description">Don't forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+              the tallest planetary mountain in our solar system. It's two and a half times 
+              the size of Everest!
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Averge">Avg.</abbr> distance
+              <span class="destination__info-data">
+                225 <abbr class="destination__info-name" title="Milion">mil.</abbr> km
+              </span>
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Estimate">Est.</abbr> travel time
+              <span class="destination__info-data">9 months</span>
+            </p>
+      
+          </article>
+        </div>
+        <div class="swiper-slide destination__swiper-slide">
+          <article class="destination__article">
+            <img class="destination__img" src="../assets/destination/image-europa.webp" alt="europa">
+            <h2 class="destination__name">Europa</h2>
+      
+            <p class="destination__description">The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+              winter lover's dream. With an icy surface, it's perfect for a bit of 
+              ice skating, curling, hockey, or simple relaxation in your snug 
+              wintery cabin.
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Averge">Avg.</abbr> distance
+              <span class="destination__info-data">
+                628 <abbr class="destination__info-name" title="Milion">mil.</abbr> km
+              </span>
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Estimate">Est.</abbr> travel time
+              <span class="destination__info-data">3 years</span>
+            </p>
+      
+          </article>
+        </div>
+        <div class="swiper-slide destination__swiper-slide">
+          <article class="destination__article">
+            <img class="destination__img" src="../assets/destination/image-titan.webp" alt="titan">
+            <h2 class="destination__name">Titan</h2>
+      
+            <p class="destination__description">The only moon known to have a dense atmosphere other than Earth, Titan 
+              is a home away from home (just a few hundred degrees colder!). As a 
+              bonus, you get striking views of the Rings of Saturn.
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Averge">Avg.</abbr> distance
+              <span class="destination__info-data">
+                1.6 <abbr class="destination__info-name" title="Bilion">bil.</abbr> km
+              </span>
+            </p>
+      
+            <p class="destination__info">
+              <abbr class="destination__info-name" title="Estimate">Est.</abbr> travel time
+              <span class="destination__info-data">7 years</span>
+            </p>
+      
+          </article>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
