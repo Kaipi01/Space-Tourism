@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   padding: 24px;
+  position: relative;
+  z-index: 99;
 
   @media (min-width: $desktop) {
     padding-top: 60px;
@@ -18,14 +20,14 @@
   }
 
   &__menu {
-    //display: flex;
-    display: none;
+    display: flex;
+    //display: none;
     position: absolute;
     top: 0;
     right: 0;
     flex-direction: column;
     width: 254px;
-    height: 100vh;
+    height: 930px;
     margin-left: auto;
     padding-top: 140px;
     padding-left: 40px;
