@@ -26,6 +26,8 @@ destinationNavBtns.forEach((btn) => {
   });
 });
 
+window.addEventListener("resize", removeAddMenuTabindex);
+
 function openCloseMenu() {
   const menuSwitchBtnIcons = document.querySelectorAll(".nav__menu-btn-icon");
   menu.classList.toggle("nav__menu--open");
@@ -52,7 +54,10 @@ function setFirstSlideBtnActive(btn) {
 
 function removeAddMenuTabindex() {
   menuLinks.forEach((link) => {
-    if (menu.classList.contains("nav__menu--open")) {
+    if (
+      menu.classList.contains("nav__menu--open") ||
+      window.innerWidth >= 650
+    ) {
       link.removeAttribute("tabindex", "-1");
     } else {
       link.setAttribute("tabindex", "-1");
