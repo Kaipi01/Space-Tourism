@@ -3,10 +3,10 @@
 
 .nav {
   display: flex;
-  align-items: center;
-  padding: 24px;
   position: relative;
   z-index: 99;
+  align-items: center;
+  padding: 24px;
 
   @media (min-width: $desktop) {
     padding-top: 60px;
@@ -21,7 +21,6 @@
 
   &__menu {
     display: flex;
-    //display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -35,6 +34,7 @@
     transition: $transition;
     background-color: rgba(255, 255, 255, 0.071);
     list-style: none;
+    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
     gap: 25px;
 
