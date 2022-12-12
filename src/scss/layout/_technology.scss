@@ -36,7 +36,7 @@
     letter-spacing: $link-space;
 
     @media (min-width: $tablet) {
-      margin: 40px 0 30px 40px;
+      margin: 40px 0 15px 40px;
       font-size: 20px;
       text-align: start;
     }
@@ -55,7 +55,7 @@
     }
 
     @media (min-width: 1350px) {
-      transform: translateX(calc(50% - 725px));
+      transform: translate(calc(50% - 725px),25px);
     }
 
     &-nr {
@@ -70,51 +70,53 @@
     .swiper-pagination {
       position: absolute;
       z-index: 2 !important;
-      top: 55px;
+      top: 50%;
       left: -50%;
-      transform: translateX(50%);
+      transform: translate(50%, calc(50% - 185px));
       counter-reset: number;
 
       @media (min-width: $tablet) {
-        top: 265px;
+        transform: translate(50%, calc(50% - 235px));
       }
 
       @media (min-width: $desktop) {
-        top: 80px;
-        transform: translateX(calc(50% - 435px));
+        display: flex;
+        top: 110px;
+        left: 35px;
+        flex-direction: column;
+        transform: none;
+        gap: 20px;
       }
 
       @media (min-width: 1200px) {
-        transform: translateX(calc(50% - 475px));
+        left: -50%;
+        align-items: center;
+        transform: translateX(calc(50% - 515px));
       }
 
       @media (min-width: 1350px) {
-        transform: translateX(calc(50% - 525px));
+        top: 170px;
+        transform: translateX(calc(50% - 590px));
+      }
+
+      @media (min-width: 1400px) {
+        transform: translateX(calc(50% - 575px));
+      }
+
+      @media (min-width: 1750px) {
+        transform: translateX(calc(50% - 700px));
       }
 
       &-bullet {
-        //display: block;
         position: relative;
         width: 40px;
         height: 40px;
-        opacity: 1;
         margin-right: 10px !important;
         transition: $transition;
-        color: $font-color;
         border: 2px solid rgba(255, 255, 255, 0.25);
+        opacity: 1;
         background-color: transparent;
-
-        @media (min-width: $desktop) {
-          width: 60px;
-          height: 60px;
-          margin-right: 20px !important;
-        }
-
-        @media (min-width: $desktop) {
-          width: 80px;
-          height: 80px;
-          margin-right: 20px !important;
-        }
+        color: $font-color;
 
         &::after {
           content: counter(number);
@@ -122,8 +124,29 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-size: 2rem;
+          font-family: $font-Bellefair;
+          font-size: 16px;
           counter-increment: number;
+        }
+
+        @media (min-width: $tablet) {
+          width: 60px;
+          height: 60px;
+          margin-right: 20px !important;
+
+          &::after {
+            font-size: 24px;
+          }
+        }
+
+        @media (min-width: $desktop) {
+          width: 80px;
+          height: 80px;
+          margin-right: 20px !important;
+
+          &::after {
+            font-size: $heading-4-size;
+          }
         }
 
         &:hover,
@@ -150,12 +173,14 @@
       padding: 40px;
       padding-bottom: 0;
       place-items: center;
+      padding-bottom: 80px;
     }
 
     @media (min-width: $desktop) {
       grid-template-columns: repeat(3, 1fr);
+      margin: 40px 0 0 auto;
       margin-top: 20px;
-      padding: 50px;
+      padding: 50px 0 50px 150px;
       place-items: start;
     }
 
@@ -163,42 +188,50 @@
       padding: 0;
       padding-top: 40px;
     }
+
+    @media (min-width: 1750px) {
+      margin: 0 auto;
+    }
   }
 
   &__img {
     order: -1;
-    height: 222px;
+    width: 100vw;
+    max-width: 768px;
     margin: 0 auto;
-    padding: 0 23%;
 
     &-portrait {
       display: none;
     }
 
-    &-landscape {
-      display: none;
-    }
-
     @media (min-width: $tablet) {
       grid-column: span 2;
-      order: 0;
-      height: 532px;
       margin: 0;
-      margin-top: 40px;
     }
 
     @media (min-width: $desktop) {
       grid-column: span 1;
-      grid-row: span 3;
-      width: auto;
-      height: 562px;
-      margin-top: -180px;
-      padding: 0;
+      order: 0;
+      max-width: 385px;
+      margin-top: -130px;
+
+      &-portrait {
+        display: block;
+      }
+
+      &-landscape {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1350px) {
+      max-width: 515px;
+      margin-top: -192px;
     }
   }
 
   &__name {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 17px;
     font-family: $font-Bellefair;
     font-size: 24px;
@@ -207,21 +240,17 @@
     &-prev {
       display: block;
       margin-bottom: 10px;
-      opacity: 0.5;
-      font-size: $font-base-size;
+      color: #d0d6f9;
+      font-size: $sub-heading-2-size;
 
-      @media (min-width: $tablet) {
-        font-size: 24px;
-      }
-
-      @media (min-width: $desktop) {
-        font-size: $heading-4-size;
+      @media (min-width: 1350px) {
+        padding-top: 70px;
       }
     }
 
     @media (min-width: $tablet) {
       grid-column: span 2;
-      margin-top: 0;
+      margin-top: 150px;
       font-size: 40px;
     }
 
